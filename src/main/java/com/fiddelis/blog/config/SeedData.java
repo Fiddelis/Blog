@@ -21,33 +21,52 @@ public class SeedData implements CommandLineRunner {
         if(articles.isEmpty()) {
             Article article1 = new Article();
             article1.setTitle("Titulo do Primeiro Post");
-            article1.setBody("O H2 é um sistema de gerenciamento de banco de dados relacional (SGBDR) bastante utilizado, especialmente em desenvolvimento e ambientes de teste devido à sua simplicidade de configuração e uso. No entanto, como qualquer software, ele também pode apresentar uma série de problemas, incluindo:\n" +
-                    "<br><br>" +
-                    "Concorrência: Em ambientes com muitos acessos simultâneos, podem ocorrer problemas de concorrência, como deadlocks e bloqueios prolongados.\n" +
-                    "<br><br>" +
-                    "Desempenho: Dependendo do volume de dados e da complexidade das consultas, o desempenho do banco de dados pode diminuir. O ajuste de índices e consultas pode ser necessário para otimizar o desempenho.\n" +
-                    "<br><br>" +
-                    "Corrupção de dados: Embora seja raro, bugs ou falhas no software podem levar à corrupção dos dados armazenados no banco de dados.\n" +
-                    "<br><br>" +
-                    "Problemas de segurança: Se o H2 não for configurado corretamente, pode estar vulnerável a ataques de segurança, como injeção de SQL ou acesso não autorizado.\n" +
-                    "<br><br>" +
-                    "Limitações de escalabilidade: O H2 pode ter limitações de escalabilidade em comparação com outros SGBDRs, o que pode se tornar um problema em sistemas que precisam escalar para lidar com grandes volumes de dados ou muitos usuários simultâneos.\n" +
-                    "<br><br>" +
-                    "Backup e recuperação: A implementação de estratégias de backup e recuperação inadequadas pode levar à perda de dados em caso de falha do sistema.\n" +
-                    "<br><br>" +
-                    "Compatibilidade com outros sistemas: Algumas funcionalidades específicas de outros SGBDRs podem não ser suportadas pelo H2, o que pode levar a problemas de compatibilidade ao migrar ou integrar sistemas.\n" +
-                    "<br><br>" +
-                    "Problemas de configuração: Configurações inadequadas do H2 podem levar a problemas de desempenho, segurança ou mesmo inoperância do banco de dados.\n" +
-                    "<br><br>" +
-                    "Gerenciamento de memória: Configurar a alocação de memória correta para o H2 pode ser crucial para o desempenho e estabilidade do sistema. Configurações inadequadas podem levar a vazamentos de memória ou queda no desempenho.\n" +
-                    "<br><br>" +
-                    "Problemas de transação: Erros na implementação de transações podem levar a inconsistências nos dados ou perda de integridade.\n" +
-                    "<br><br>" +
-                    "É importante entender esses possíveis problemas ao trabalhar com o H2 e implementar práticas de desenvolvimento e administração que ajudem a minimizar esses riscos. Além disso, estar ciente das atualizações de segurança e correções de bugs fornecidas pelos desenvolvedores do H2 é fundamental para manter um ambiente de banco de dados seguro e estável.");
-
+            article1.setBody("<p>\n" +
+                    "            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, \n" +
+                    "            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula \n" +
+                    "            massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est \n" +
+                    "            eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, \n" +
+                    "            consequat in, pretium a, enim. Pellentesque congue.\n" +
+                    "        </p>\n" +
+                    "        <br>\n" +
+                    "        <p>\n" +
+                    "            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. \n" +
+                    "            Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis \n" +
+                    "            in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque \n" +
+                    "            fermentum. Maecenas adipiscing ante non diam sodales hendrerit.\n" +
+                    "        </p>\n" +
+                    "        <br>\n" +
+                    "        <p>\n" +
+                    "            Donec quis dui at dolor tempor interdum. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, \n" +
+                    "            mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat \n" +
+                    "            pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit \n" +
+                    "            amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo \n" +
+                    "            pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque.\n" +
+                    "        </p>");
             Article article2 = new Article();
             article2.setTitle("Titulo do Segundo Post");
-            article2.setBody("TEXTAAAAAAAAAAAAAAAAAAA");
+            article2.setBody("<p>\n" +
+                    "            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, \n" +
+                    "            dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula \n" +
+                    "            massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est \n" +
+                    "            eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, \n" +
+                    "            consequat in, pretium a, enim. Pellentesque congue.\n" +
+                    "        </p>\n" +
+                    "        <br>\n" +
+                    "        <p>\n" +
+                    "            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. \n" +
+                    "            Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis \n" +
+                    "            in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh. Mauris ac mauris sed pede pellentesque \n" +
+                    "            fermentum. Maecenas adipiscing ante non diam sodales hendrerit.\n" +
+                    "        </p>\n" +
+                    "        <br>\n" +
+                    "        <p>\n" +
+                    "            Donec quis dui at dolor tempor interdum. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, \n" +
+                    "            mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat \n" +
+                    "            pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit \n" +
+                    "            amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo \n" +
+                    "            pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque.\n" +
+                    "        </p>");
 
             articleService.save(article1);
             articleService.save(article2);

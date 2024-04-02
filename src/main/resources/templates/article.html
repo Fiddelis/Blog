@@ -26,9 +26,9 @@
                 <p th:text="${article.title}">{TITULO}</p>
                 <p class="date" th:text="${#temporals.format(article.createdAt, 'dd•MM')}">{DATA}</p>
             </h1>
-            <p class="text" th:utext="${article.body}">
+            <div class="text" th:utext="${article.body}">
                 {INSIRA O TEXTO AQUI}
-            </p>
+            </div>
         </section>
     </main> 
     <footer>
