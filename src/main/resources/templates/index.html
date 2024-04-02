@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiddelis Blog</title>
+    <link rel="stylesheet" th:href="@{/styles/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/styles/css/index.css}">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <p>@Fiddelis</p>
+            <p>:</p>
+            <a class="menu-link" href="https://github.com/Fiddelis" target="_blank">Github</a>
+            <p>/</p>
+            <a class="menu-link" href="https://www.linkedin.com/in/lucas-ruan-fidelis/" target="_blank">Linkedin</a>
+        </nav>
+    </header>
+    <main>
+        <section class="articles">
+            <h1 class="title">
+                Artigos
+            </h1>
+            <ul class="articles-list" th:each="article : ${articles}">
+                <li class="article-description">
+                    <p class="article-date" th:text="${#temporals.format(article.createdAt, 'dd•MM')}">{DATA}</p>
+                    <a class="article-title" th:href="@{'/article/' + ${article.id}}"
+                    th:text="${article.title}">{TITULO ARTIGO}</a>
+                </li>
+            </ul>
+        </section>
+    </main> 
+    <footer>
+        <a class="mail" href="mailto:lucas.ruan@ges.inatel.br">lucas.ruan@ges.inatel.br</a>
+    </footer>
+</body>
+</html>

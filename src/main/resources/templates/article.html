@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${article.title}">Fiddelis</title>
+    <link rel="stylesheet" th:href="@{/styles/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/styles/css/article.css}">
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <p>@Fiddelis</p>
+            <p>:</p>
+            <a class="menu-link" href="https://github.com/Fiddelis" target="_blank">Github</a>
+            <p>/</p>
+            <a class="menu-link" href="https://www.linkedin.com/in/lucas-ruan-fidelis/" target="_blank">Linkedin</a>
+        </nav>
+    </header>
+    <main>
+        <section class="article">
+            <a class="return" th:href="@{'/'}"><-</a>
+            <h1 class="title">
+                <p th:text="${article.title}">{TITULO}</p>
+                <p class="date" th:text="${#temporals.format(article.createdAt, 'dd•MM')}">{DATA}</p>
+            </h1>
+            <p class="text" th:utext="${article.body}">
+                {INSIRA O TEXTO AQUI}
+            </p>
+        </section>
+    </main> 
+    <footer>
+        <a class="mail" href="mailto:lucas.ruan@ges.inatel.br">lucas.ruan@ges.inatel.br</a>
+    </footer>
+</body>
+</html>
